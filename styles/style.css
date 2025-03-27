@@ -346,7 +346,8 @@ main {
     border-radius: 0.5em;
 }
 
-.contact-form input, textarea {
+.contact-form input,
+textarea {
     outline: none;
     background: none;
 
@@ -358,17 +359,17 @@ main {
     color: white;
 }
 
-.contact-form input::placeholder, textarea::placeholder {
+.contact-form input::placeholder,
+textarea::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
 .contact-form button {
     border: none;
-    border-radius: .5em;
+    border-radius: 0.5em;
 
     padding: 0.5em 0;
     background-color: var(--soft-green);
 
     color: white;
-
 }
