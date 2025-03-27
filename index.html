@@ -5,62 +5,89 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>TravelBloom</title>
         <link rel="stylesheet" href="styles/style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <header>
-            <nav class="header__nav">
-                <div class="header__logo">
-                    <img src="images/logo.svg" alt="logo">
-                    <h1>TravelBloom</h1>
-                </div>
+            <div class="header__logo">
+                <img src="images/logo.svg" alt="logo" />
+                <h1>TravelBloom</h1>
+            </div>
 
+            <nav class="header__nav">
                 <ul class="header__menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
-
-                <div class="header__search">
-                    <input type="search" id="search" />
-                    <img src="images/search.svg" alt="search">
-                    <button id="header__search-btn">Search</button>
-                    <button id="header__clear-btn">Clear</button>
-                </div>
-
-                <div class="header__search-results"></div>
             </nav>
+
+            <div class="header__search">
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Enter a destination or keyword"
+                />
+                <img src="images/search.svg" alt="search" />
+                <button id="header__search-btn">Search</button>
+                <button id="header__clear-btn">Clear</button>
+            </div>
+
+            <div class="header__search-results"></div>
         </header>
 
-        <section class="hero">
-            <div class="hero__social">
-                <div class="hero__social-line"></div>
+        <main>
+            <aside class="social">
+                <div class="social-line"></div>
 
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="images/twitter.svg" alt="twitter" />
+                            <img
+                                src="images/twitter.svg"
+                                alt="twitter"
+                                class="social-icon"
+                            />
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="images/facebook.svg" alt="facebook" />
+                            <img
+                                src="images/facebook.svg"
+                                alt="facebook"
+                                class="social-icon"
+                            />
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="images/instagram.svg" alt="instagram" />
+                            <img
+                                src="images/instagram.svg"
+                                alt="instagram"
+                                class="social-icon"
+                            />
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="images/youtube.svg" alt="youtube" />
+                            <img
+                                src="images/youtube.svg"
+                                alt="youtube"
+                                class="social-icon"
+                            />
                         </a>
                     </li>
                 </ul>
-            </div>
+            </aside>
 
-            <div class="hero__main">
-                <h1>
+            <section class="home">
+                <h1 class="primary-heading">
                     Explore <br />
                     Dream <br />
                     Destination <br />
@@ -73,8 +100,69 @@
                     ignites a sense of wonder.
                 </p>
 
-                <button class="hero__cta-btn">Book Now</button>
-            </div>
-        </section>
+                <button class="home__cta-btn">Book Now</button>
+            </section>
+
+            <section class="about-us">
+                <h1 class="primary-heading">About Us</h1>
+
+                <p>
+                    Welcome to Our Company! We are a team of passionate
+                    individuals dedicated to providing excellent
+                    services/products to our customers. Our mission is to
+                    <strong>provide the best experience</strong> for people
+                    traveling to different destinations around the world.<br />
+                    Our values include integrity, innovation, customer
+                    satisfaction, and teamwork. We believe in
+                    <strong>putting out customers first</strong> and
+                    <strong>working together</strong> to achieve our goals.<br />
+                    Feel free to explore our website to learn more about what we
+                    offer!
+                </p>
+
+                <section class="our-team">
+                    <h2 class="secondary-heading">Our<br />Team</h2>
+
+                    <div class="our-team__members">
+                        <div class="our-team__member">
+                            <p>John Doe</p>
+                            <p>John Doe is responsible for...</p>
+                            <p class="our-team__member-job">CEO</p>
+                        </div>
+                        <div class="our-team__member">
+                            <p>Celina Thomas</p>
+                            <p>Celina Thomas is responsible for...</p>
+                            <p class="our-team__member-job">Team Lead</p>
+                        </div>
+                        <div class="our-team__member">
+                            <p>Mike Tysen</p>
+                            <p>Mike Tysen is responsible for...</p>
+                            <p class="our-team__member-job">Delivery Head</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="contact">
+                <div class="contact-side">
+                    <h1 class="primary-heading">Contact Us</h1>
+
+                    <p>Get in touch</p>
+                </div>
+
+                <div class="contact-form">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" placeholder="Enter your name"/>
+
+                    <label for="Email">Email</label>
+                    <input type="email" id="contact-email" placeholder="Enter your email">
+
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" placeholder="Enter your message" rows="8"></textarea>
+
+                    <button id="contact-submit">Submit</button>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
