@@ -17,6 +17,8 @@ body {
     display: flex;
     flex-direction: column;
 
+    overflow: hidden;
+
     background-image: linear-gradient(
             to right,
             var(--soft-green-transparent),
@@ -25,6 +27,29 @@ body {
         url(../images/new-york.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Util */
+
+.primary-heading {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--inter);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: white;
+}
+
+.secondary-heading {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--inter);
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
 }
 
 /* --- Top bar --- */
@@ -124,6 +149,73 @@ header {
 
 .header__search-results {
     position: absolute;
+    top: 5em;
+    right: 2em;
+
+    max-height: calc(100vh - 5em);
+
+    overflow-y: auto;
+
+    border-radius: 0.5em;
+}
+
+.header__search-result {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1em;
+
+    overflow: hidden;
+
+    max-width: 30em;
+
+    background-color: white;
+
+    border-radius: 0.5em;
+}
+
+.header__search-result img {
+    width: 100%;
+    max-height: 15em;
+    object-fit: cover;
+}
+
+.header__search-result .search-content {
+    padding: 1em;
+
+    font-family: var(--montserrat);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.header__search-result .search-content p {
+    padding: 0;
+    margin: 0;
+
+    font-family: var(--montserrat);
+}
+
+.header__search-result .search-content p:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.header__search-result .search-content button {
+    width: fit-content;
+
+    padding: 0.5em 1em;
+
+    border: none;
+
+    background-color: var(--soft-green);
+
+    color: white;
+
+    border-radius: 0.5em;
+
+    cursor: pointer;
 }
 
 /* --- Main --- */
@@ -173,29 +265,6 @@ main {
     height: 2em;
 
     object-fit: contain;
-}
-
-/* Util */
-
-.primary-heading {
-    margin: 0;
-    padding: 0;
-
-    font-family: var(--inter);
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 4rem;
-    color: white;
-}
-
-.secondary-heading {
-    margin: 0;
-    padding: 0;
-
-    font-family: var(--inter);
-    font-weight: 900;
-    font-size: 3rem;
-    color: white;
 }
 
 /* Home */
