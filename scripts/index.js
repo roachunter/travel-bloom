@@ -62,7 +62,7 @@ async function onSearchClick() {
         return;
     }
 
-    fetch("../data/travel_recommendation_api.json")
+    fetch("data/travel_recommendation_api.json")
         .then((response) => response.json())
         .then((data) => {
             let results;
